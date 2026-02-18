@@ -16,4 +16,20 @@
 
     <!-- Music -->
     <audio id="bgmusic" loop>
-        <source src="
+        <source src="{{ url_for('static', filename='song.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+    <button class="btn" onclick="playMusic()">Click Here My Love 💝</button>
+</div>
+
+<script>
+function playMusic() {
+    var music = document.getElementById("bgmusic");
+    music.play();
+}
+</script>
+
+</body>
+</html>
