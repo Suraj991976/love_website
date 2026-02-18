@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.photo {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px red;
+}
+
+.heart {
+    width: 150px;
+    height: 150px;
+    background: red;
+    position: relative;
+    margin: 50px auto;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    top: -75px;
+    left: 0;
+}
+
+.heart:after {
+    left: 75px;
+    top: 0;
+}
+
+@keyframes beat {
+    0% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.2); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
