@@ -1,22 +1,42 @@
 body {
     margin: 0;
-    background: black;
+    background: radial-gradient(circle, #1a0000, black);
     color: white;
     text-align: center;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
+/* Container */
 .container {
     margin-top: 50px;
 }
 
-.photo {
-    width: 200px;
-    border-radius: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 20px red;
+/* Heading Glow */
+h1 {
+    font-size: 40px;
+    text-shadow: 0 0 20px red, 0 0 40px pink;
 }
 
+h2 {
+    color: pink;
+    text-shadow: 0 0 15px red;
+}
+
+/* Photo Styling */
+.photo {
+    width: 220px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 30px red;
+    transition: transform 0.5s;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+/* Heart Shape */
 .heart {
     width: 150px;
     height: 150px;
@@ -25,6 +45,7 @@ body {
     margin: 50px auto;
     transform: rotate(-45deg);
     animation: beat 1s infinite;
+    box-shadow: 0 0 40px red;
 }
 
 .heart:before,
@@ -47,8 +68,27 @@ body {
     top: 0;
 }
 
+/* Heart Animation */
 @keyframes beat {
     0% { transform: rotate(-45deg) scale(1); }
     50% { transform: rotate(-45deg) scale(1.2); }
     100% { transform: rotate(-45deg) scale(1); }
+}
+
+/* Button Styling */
+.btn {
+    background: linear-gradient(45deg, red, pink);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px red;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px pink;
 }
